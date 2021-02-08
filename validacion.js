@@ -72,7 +72,7 @@ document.getElementById("carnet").dispatchEvent(click_ev);
         var byteArray = new Uint8Array(byteNumbers);
         var file = new Blob([byteArray], { type: 'application/pdf;base64' });
         var fileURL = URL.createObjectURL(file);
-        window.open(fileURL);
+        window.open(fileURL, "_blank");
         
         // }
     } catch (e) {
