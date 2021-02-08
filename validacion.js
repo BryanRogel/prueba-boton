@@ -46,42 +46,55 @@ document.getElementById("carnet").dispatchEvent(click_ev);
       alert("El navegador es:!!!!!!!!!!!!! " + navegador());
         
         
-      if(navegador() == 'Safari')
-      {
-        try {
-       const downloadLink = document.createElement("a");
-       const fileName = 'TestPDF.pdf';
-       downloadLink.href = linkSource;
-       downloadLink.download = fileName;
-       //downloadLink.click();
-       var click_ev = document.createEvent("MouseEvents");
-       // inicia liza el evento
-       click_ev.initEvent("click", true /* bubble */, true /* cancelable */);
-       // dispara el evento
-       downloadLink.dispatchEvent(click_ev);
-       isDonwloaded = true;
-      } catch (eerror) {
-        alert('error', eerror);
-      }
- 
-      } 
-      else
-      {
-        try {
-       var byteCharacters = atob(data);
-       var byteNumbers = new Array(byteCharacters.length);
-       for (var i = 0; i < byteCharacters.length; i++) {
-         byteNumbers[i] = byteCharacters.charCodeAt(i);
-       }
-       var byteArray = new Uint8Array(byteNumbers);
-       var file = new Blob([byteArray], { type: 'application/pdf;base64' });
-       var fileURL = URL.createObjectURL(file);
-       window.open(fileURL);
-      } catch (eerror) {
-        alert('error', eerror);
-      }
- 
-      }
+      try {
+        if(navegador() == 'Safari')
+        {
+          alert('safari 1')
+        const downloadLink = document.createElement("a");
+        alert('safari 2')
+        const fileName = 'TestPDF.pdf';
+        alert('safari 3')
+        downloadLink.href = linkSource;
+        alert('safari 4')
+        downloadLink.download = fileName;
+        alert('safari 5')
+        //downloadLink.click();
+        var click_ev = document.createEvent("MouseEvents");
+        alert('safari 6')
+        // inicia liza el evento
+        click_ev.initEvent("click", true /* bubble */, true /* cancelable */);
+        alert('safari 7')
+        // dispara el evento
+        downloadLink.dispatchEvent(click_ev);
+        alert('safari 8')
+        isDonwloaded = true;
+        alert('safari 9')
+  
+        } 
+        else
+        {
+          alert('no safari 1')
+        var byteCharacters = atob(data);
+        alert('no safari 2')
+        var byteNumbers = new Array(byteCharacters.length);
+        alert('no safari 3')
+        for (var i = 0; i < byteCharacters.length; i++) {
+          alert('no safari 4')
+          byteNumbers[i] = byteCharacters.charCodeAt(i);
+          alert('no safari 5')
+        }
+        var byteArray = new Uint8Array(byteNumbers);
+        alert('no safari 6')
+        var file = new Blob([byteArray], { type: 'application/pdf;base64' });
+        alert('no safari 7')
+        var fileURL = URL.createObjectURL(file);
+        alert('no safari 8')
+        window.open(fileURL);
+        alert('no safari 9')
+        }
+    } catch (e) {
+      alert('error'+ e);
+    }
    
    
 }
