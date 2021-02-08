@@ -47,51 +47,34 @@ document.getElementById("carnet").dispatchEvent(click_ev);
         
         
       try {
-        if(navegador() == 'Safari')
-        {
-          alert('safari 1')
+        // if(navegador() == 'Safari')
+        // {
         const downloadLink = document.createElement("a");
-        alert('safari 2')
         const fileName = 'TestPDF.pdf';
-        alert('safari 3')
         downloadLink.href = linkSource;
-        alert('safari 4')
         downloadLink.download = fileName;
-        alert('safari 5')
         //downloadLink.click();
         var click_ev = document.createEvent("MouseEvents");
-        alert('safari 6')
         // inicia liza el evento
         click_ev.initEvent("click", true /* bubble */, true /* cancelable */);
-        alert('safari 7')
         // dispara el evento
         downloadLink.dispatchEvent(click_ev);
-        alert('safari 8')
         isDonwloaded = true;
-        alert('safari 9')
   
-        } 
-        else
-        {
-          alert('no safari 1')
+        // } 
+        // else
+        // {
         var byteCharacters = atob(data);
-        alert('no safari 2')
         var byteNumbers = new Array(byteCharacters.length);
-        alert('no safari 3')
         for (var i = 0; i < byteCharacters.length; i++) {
-
           byteNumbers[i] = byteCharacters.charCodeAt(i);
-  
         }
         var byteArray = new Uint8Array(byteNumbers);
-        alert('no safari 6')
         var file = new Blob([byteArray], { type: 'application/pdf;base64' });
-        alert('no safari 7')
         var fileURL = URL.createObjectURL(file);
-        alert('no safari 8')
         window.open(fileURL);
-        alert('no safari 9')
-        }
+        
+        // }
     } catch (e) {
       alert('error'+ e);
     }
