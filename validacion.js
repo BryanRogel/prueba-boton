@@ -79,9 +79,9 @@ document.getElementById("carnet").dispatchEvent(click_ev);
         var byteNumbers = new Array(byteCharacters.length);
         alert('no safari 3')
         for (var i = 0; i < byteCharacters.length; i++) {
-          alert('no safari 4')
+
           byteNumbers[i] = byteCharacters.charCodeAt(i);
-          alert('no safari 5')
+  
         }
         var byteArray = new Uint8Array(byteNumbers);
         alert('no safari 6')
