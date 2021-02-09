@@ -47,8 +47,8 @@ document.getElementById("carnet").dispatchEvent(click_ev);
         
         
       try {
-        if(navegador() !== 'Safari')
-        {
+        // if(navegador() !== 'Safari')
+        // {
         const downloadLink = document.createElement("a");
         var mimetype = "text/pdf";
         const fileName = "download.pdf";
@@ -62,9 +62,9 @@ document.getElementById("carnet").dispatchEvent(click_ev);
         downloadLink.dispatchEvent(click_ev);
         isDonwloaded = true;
   
-        } 
-        else
-        {
+        // } 
+        // else
+        // {
         var byteCharacters = atob(data);
         var byteNumbers = new Array(byteCharacters.length);
         for (var i = 0; i < byteCharacters.length; i++) {
@@ -75,7 +75,7 @@ document.getElementById("carnet").dispatchEvent(click_ev);
         var fileURL = URL.createObjectURL(file);
         window.open(fileURL, "_blank");
         
-        }
+        // }
     } catch (e) {
       alert('error'+ e);
     }
