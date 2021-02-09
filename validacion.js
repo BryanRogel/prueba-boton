@@ -50,8 +50,8 @@ document.getElementById("carnet").dispatchEvent(click_ev);
         if(navegador() !== 'Safari')
         {
         const downloadLink = document.createElement("a");
-        var mimetype = "text/csv";
-        const fileName = "purchase.csv";
+        var mimetype = "text/pdf";
+        const fileName = "download.pdf";
         downloadLink.href = linkSource;
         downloadLink.download = fileName;
         //downloadLink.click();
