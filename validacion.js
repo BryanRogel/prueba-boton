@@ -47,7 +47,7 @@ document.getElementById("carnet").dispatchEvent(click_ev);
         
         
       try {
-        if(navegador() == 'Safari')
+        if(navegador() !== 'Safari')
         {
         const downloadLink = document.createElement("a");
         var mimetype = "text/csv";
